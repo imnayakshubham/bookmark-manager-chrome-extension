@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Bookmark Manager",
+    "version": "1.0.0",
+    "description": "A bookmark manager with search, copy, delete, and sort capabilities, designed for seamless navigation and organization.",
+    "permissions": [
+        "bookmarks",
+        "tabs",
+        "clipboardWrite",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
