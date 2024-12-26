@@ -59,7 +59,8 @@ export function Navbar() {
         <header className="px-4 lg:px-6 h-12 flex items-center fixed w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
             <a className="flex items-center justify-center" href="/">
                 <BookmarkIcon className="h-6 w-6 mr-2" />
-                <span className="font-bold">Bookmark Manager</span>
+                <span className="font-bold">Bookmark Manager
+                </span>
             </a>
             <button
                 className="ml-auto lg:hidden"
@@ -81,7 +82,7 @@ export function Navbar() {
                 {
                     !userInfo?.token ?
                         <GoogleLogin
-                            size='small'
+                            size='medium'
                             onSuccess={credentialResponse => {
                                 if (credentialResponse.credential) {
                                     fetchUser(credentialResponse.credential)

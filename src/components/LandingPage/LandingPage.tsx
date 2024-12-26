@@ -10,7 +10,7 @@ export default function LandingPage() {
         <>
             <main className="flex-1">
                 <section className="min-h-screen bg-[radial-gradient(hsl(0,72%,70%,40%),hsl(24,62%,73%,80%),hsl(var(--background))_60%)] flex items-center justify-center text-center text-balance flex-col gap-8 px-4">
-                    <h1 className="text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight m-4 max-w-6xl text-balance">
+                    <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight m-4 max-w-6xl text-balance">
                         Manage All Your Bookmarks in One Place
                     </h1>
                     <p className="text-lg lg:text-3xl max-w-screen-xl">
@@ -198,7 +198,7 @@ export default function LandingPage() {
                 </section>
             </main>
             <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-                <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Bookmark Manager. All rights reserved.</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Bookmark Manager. All rights reserved.</p>
                 <nav className="sm:ml-auto flex gap-4 sm:gap-6">
                     <a className="text-xs hover:underline underline-offset-4" href="#">
                         Terms of Service
