@@ -10,6 +10,6 @@
       "@/*": ["src/*"]
     },
     "jsx": "react-jsx",
-    "lib": ["dom", "esnext"]
+    "libs": ["dom", "esnext"]
   }
 }
