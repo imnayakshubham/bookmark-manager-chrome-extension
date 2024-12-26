@@ -16,12 +16,10 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
     }, [userInfo])
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const userData = JSON.parse(localStorage.getItem(`${appName}__info`) || "null")
-            if (!userInfo) {
-                const storedUserInfo = JSON.parse(userData)
-                updateUser(storedUserInfo)
-            }
+        const userData = JSON.parse(localStorage.getItem(`${appName}__info`) || "null")
+        if (!userInfo) {
+            const storedUserInfo = JSON.parse(userData)
+            updateUser(storedUserInfo)
         }
     }, [updateUser, userInfo])
 

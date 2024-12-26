@@ -73,29 +73,29 @@ const BookmarkManager = () => {
             if (tabs?.length > 0) {
                 const currentTab = tabs[0];
                 if (!currentTab?.url) {
-                    alert('No active tab URL found!');
+                    window.alert('No active tab URL found!');
                     return;
                 }
 
                 const tabExists = bookmarks.some((bookmark) => bookmark.url === currentTab.url);
 
                 if (tabExists) {
-                    alert('Bookmark already exists!');
+                    window.alert('Bookmark already exists!');
                 } else {
                     chrome.bookmarks.create(
                         { title: currentTab.title || 'Untitled', url: currentTab.url },
                         (createdBookmark) => {
                             if (createdBookmark) {
                                 setBookmarks((prev) => [createdBookmark, ...prev]);
-                                alert('Bookmark added successfully!');
+                                window.alert('Bookmark added successfully!');
                             } else {
-                                alert('Failed to save bookmark!');
+                                window.alert('Failed to save bookmark!');
                             }
                         }
                     );
                 }
             } else {
-                alert('No active tab found!');
+                window.alert('No active tab found!');
             }
         });
     };
@@ -109,13 +109,13 @@ const BookmarkManager = () => {
     const handleDelete = (id: string) => {
         chrome.bookmarks.remove(id, () => {
             setBookmarks((prev) => prev.filter((bookmark) => bookmark.id !== id));
-            alert('Bookmark deleted successfully!');
+            window.alert('Bookmark deleted successfully!');
         });
     };
 
     const handleCopyUrl = (url: string) => {
         navigator.clipboard.writeText(url);
-        alert('Copied to clipboard!');
+        window.alert('Copied to clipboard!');
     };
 
     const handleOpenInNewTab = (url: string) => {

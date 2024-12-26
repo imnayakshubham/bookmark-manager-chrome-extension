@@ -7,7 +7,7 @@ function init() {
     const container = document.createElement('div')
     container.id = 'extension-button'
     document.body.appendChild(container)
-    alert("helerlj")
+    window.alert("helerlj")
 
     const root = createRoot(container)
     root.render(<>
