@@ -146,6 +146,8 @@ const BookmarkManager = () => {
                     />
                 </div>
 
+
+
                 <div>
                     <label className="text-sm text-gray-700">Sort By:</label>
                     <select
@@ -158,6 +160,8 @@ const BookmarkManager = () => {
                     </select>
                 </div>
             </div>
+            <BrowserInfo />
+            <UserIP />
             {/* Bookmarks List */}
             <div>
                 <h2 className="text-lg font-semibold text-gray-700 mb-2">Bookmarks:</h2>
@@ -215,6 +219,55 @@ const BookmarkManager = () => {
                         </div>}
                 </ul>
             </div>
+        </div>
+    );
+};
+
+
+const UserIP = () => {
+    const [ip, setIp] = useState('');
+
+    useEffect(() => {
+        const fetchIP = async () => {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                setIp(data.ip);
+            } catch (error) {
+                console.error('Error fetching IP address:', error);
+            }
+        };
+
+        fetchIP();
+    }, []);
+
+    return (
+        <div>
+            <h2>Your IP Address</h2>
+            <p>{ip || 'Loading...'}</p>
+        </div>
+    );
+};
+
+
+const BrowserInfo = () => {
+    const getBrowserInfo = () => {
+        const { userAgent, platform, language } = navigator;
+        return {
+            userAgent,
+            platform,
+            language,
+        };
+    };
+
+    const browserInfo = getBrowserInfo();
+
+    return (
+        <div>
+            <h2>Browser Information</h2>
+            <p><strong>User Agent:</strong> {browserInfo.userAgent}</p>
+            <p><strong>Platform:</strong> {browserInfo.platform}</p>
+            <p><strong>Language:</strong> {browserInfo.language}</p>
         </div>
     );
 };

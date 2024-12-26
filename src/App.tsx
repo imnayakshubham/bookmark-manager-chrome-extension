@@ -1,5 +1,6 @@
 
 import './App.css'
+import { AppContainer } from './components/AppContainer/AppContainer';
 import BookmarkManager from './components/BookmarkManger'
 
 
@@ -10,7 +11,9 @@ const isChromeExtension = () => {
 function App() {
   return (
     <>
-      {!isChromeExtension() ? <>Hello World</> :
+      {!isChromeExtension() ? <>
+        <AppContainer />
+      </> :
         <BookmarkManager />
       }
     </>
