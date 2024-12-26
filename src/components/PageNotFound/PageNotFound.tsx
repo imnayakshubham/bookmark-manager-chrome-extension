@@ -22,7 +22,7 @@ export const PageNotFound = () => {
 }
 
 
-function FrownIcon(props) {
+function FrownIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             {...props}
