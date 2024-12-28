@@ -8,7 +8,7 @@ import path from 'path';
 export default defineConfig({
   plugins: [react(), crx({ manifest })],
   ssr: {
-    noExternal: ["react-dom"],
+    noExternal: true,
   },
   resolve: {
     alias: {
