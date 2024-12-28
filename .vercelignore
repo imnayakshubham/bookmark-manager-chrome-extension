@@ -13,3 +13,4 @@ secrets.json
 
 
 tsconfig.node.json
+tsconfig.app.json
