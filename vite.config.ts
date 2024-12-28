@@ -15,4 +15,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    ssr: true,  // Ensure SSR build mode is enabled
+  },
 })
