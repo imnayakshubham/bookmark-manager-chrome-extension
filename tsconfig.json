@@ -1,8 +1,4 @@
 {
-  "target": "ES2020",
-  "useDefineForClassFields": true,
-  "lib": ["ES2020", "DOM", "DOM.Iterable"],
-  "module": "ESNext",
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
@@ -14,7 +10,6 @@
       "@/*": ["src/*"]
     },
     "jsx": "react-jsx",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "allowJs": true
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
   }
 }
