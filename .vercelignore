@@ -1,0 +1,15 @@
+# Ignore all test files
+tests/
+*.test.ts
+*.test.tsx
+
+# Ignore certain directories
+logs/
+node_modules/
+
+# Ignore specific files
+config/dev.config.ts
+secrets.json
+
+
+tsconfig.node.json
