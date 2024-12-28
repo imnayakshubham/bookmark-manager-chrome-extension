@@ -7,6 +7,9 @@ import path from 'path';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), crx({ manifest })],
+  ssr: {
+    noExternal: ["react-dom"],
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
