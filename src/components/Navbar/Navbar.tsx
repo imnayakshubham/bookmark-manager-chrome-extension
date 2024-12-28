@@ -45,7 +45,7 @@ export function Navbar() {
             }
         } catch (error) {
             if (error instanceof Error) {
-                window.alert("Something went wrong")
+                alert("Something went wrong")
             } else {
                 const err = error as APIError
                 if (err?.status === 401) {
