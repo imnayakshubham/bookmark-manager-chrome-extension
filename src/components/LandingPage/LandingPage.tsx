@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 
 export default function LandingPage() {
 
-
     return (
         <>
             <main className="flex-1">
-                <section className="min-h-screen bg-[radial-gradient(hsl(0,72%,70%,40%),hsl(24,62%,73%,80%),hsl(var(--background))_60%)] flex items-center justify-center text-center text-balance flex-col gap-8 px-4">
+                <section className="min-h-screen flex items-center justify-center text-center text-balance flex-col gap-8 px-4">
                     <h1 className="text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight m-4 max-w-6xl text-balance">
                         Manage All Your Bookmarks in One Place
                     </h1>
@@ -186,7 +185,7 @@ export default function LandingPage() {
                         <div className="flex flex-col items-center space-y-4 text-center">
                             <div className="space-y-2">
                                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                                    Ready to Simplify Your Bookmarks?
+                                    Ready to Streamline Your Bookmarks?
                                 </h2>
                             </div>
                             <Link to="/dashboard" className="flex items-center justify-center rounded-md bg-gray-900 text-lg font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 p-2 group gap-2">

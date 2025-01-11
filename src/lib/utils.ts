@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const getBrowserInfo = () => {
-  const browser = Bowser.getParser(window.navigator.userAgent);
+  const browser = Bowser.getParser(navigator.userAgent);
 
   const browserName = browser.getBrowserName();
   const browserVersion = browser.getBrowserVersion();

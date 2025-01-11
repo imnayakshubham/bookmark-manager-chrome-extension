@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:web": "tsc -b && vite build --mode web",
+    "build:extension": "tsc -b && vite build --mode extension"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.21.0",
